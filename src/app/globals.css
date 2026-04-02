@@ -2,7 +2,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1a1025;
+  --purple-start: #3b1578;
+  --purple-end: #7c3aed;
+  --pink: #e11d90;
 }
 
 @theme inline {
@@ -12,15 +15,38 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--purple-start), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, var(--purple-start), var(--purple-end));
+}
+
+.gradient-btn:hover {
+  background: linear-gradient(135deg, #6d28d9, #a21caf);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(150px);
+  -webkit-backdrop-filter: blur(150px);
+}
+
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(124, 58, 237, 0.15);
 }

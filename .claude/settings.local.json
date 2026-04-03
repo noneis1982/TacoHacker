@@ -5,7 +5,8 @@
       "Read(//usr/local/bin/**)",
       "Bash(command -v mise fnm volta asdf)",
       "Read(//Users/tim/**)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:docs.replit.com)"
     ]
   }
 }

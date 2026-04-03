@@ -61,7 +61,7 @@ export function IngredientPicker({
     <div className="space-y-4">
       {CATEGORY_ORDER.filter((cat) => groups.has(cat)).map((cat) => (
         <div key={cat}>
-          <h4 className="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest mb-1.5">
+          <h4 className="text-[10px] font-semibold text-zinc-400 uppercase tracking-widest mb-1.5 pl-1">
             {CATEGORY_LABELS[cat]}
           </h4>
           <div className="flex flex-wrap gap-1.5">
@@ -73,7 +73,7 @@ export function IngredientPicker({
                   key={ing.code}
                   onClick={() => onToggle(ing.code)}
                   className={cn(
-                    "rounded-full border px-3 py-1.5 text-xs font-medium transition-all",
+                    "rounded-full border px-4 py-2 text-sm font-medium transition-all",
                     isSelected
                       ? `${accent.selected} shadow-md`
                       : `bg-white ${accent.idle}`

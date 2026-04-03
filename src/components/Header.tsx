@@ -14,11 +14,11 @@ export function Header() {
         WebkitBackdropFilter: "blur(150px)",
       }}
     >
-      <div className="px-4 py-3 flex items-center gap-3">
+      <div className="px-4 py-3 flex items-center">
         <button
           onClick={() => router.push("/")}
           className="gradient-btn rounded-full flex items-center justify-center text-white text-xs font-bold
-                     shadow-lg shadow-purple-500/20 active:scale-95 transition-all shrink-0"
+                     shadow-lg shadow-purple-500/20 active:scale-95 transition-all shrink-0 mr-4"
           style={{ width: 48, height: 24 }}
         >
           &#8592;

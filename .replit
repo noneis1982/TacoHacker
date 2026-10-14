@@ -7,7 +7,7 @@ channel = "stable-24_05"
 
 [deployment]
 run = ["npm", "run", "start"]
-deploymentTarget = "autoscale"
+deploymentTarget = "gce"
 build = ["npm", "run", "build"]
 
 [[ports]]

@@ -10,6 +10,7 @@ import { ClassicsPicker } from "@/components/ClassicsPicker";
 import { useMenu } from "@/hooks/useMenu";
 import { useOptimizer } from "@/hooks/useOptimizer";
 import type { ItemType } from "@/types/optimizer";
+import { trackEvent } from "@/lib/analytics";
 
 export default function StorePage() {
   const { storeId } = useParams<{ storeId: string }>();
@@ -58,6 +59,7 @@ export default function StorePage() {
   );
 
   const handleItemTypeChange = (type: ItemType) => {
+    trackEvent("item_type_selected", { item_type: type });
     setItemType(type);
     requestAnimationFrame(() => {
       const url = new URL(window.location.href);
@@ -73,7 +75,7 @@ export default function StorePage() {
   const handleClassicSelect = (ingredients: string[], type: ItemType) => {
     setSelected(new Set(ingredients));
     setItemType(type);
-    optimize(storeId, ingredients, type);
+    optimize(storeId, ingredients, type, "classic");
     requestAnimationFrame(() => {
       const url = new URL(window.location.href);
       url.searchParams.set("i", ingredients.join(","));

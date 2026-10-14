@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ZipCodeForm } from "@/components/ZipCodeForm";
 import { StoreSelector } from "@/components/StoreSelector";
 import { useStores } from "@/hooks/useStores";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Home() {
   const router = useRouter();
@@ -28,7 +29,13 @@ export default function Home() {
         </div>
 
         <div className="space-y-5">
-          <ZipCodeForm onSubmit={setZip} isLoading={isLoading} />
+          <ZipCodeForm
+            onSubmit={(value) => {
+              trackEvent("store_search_submitted");
+              setZip(value);
+            }}
+            isLoading={isLoading}
+          />
 
           {error && (
             <div className="rounded-xl border border-red-200/60 bg-red-50/50 p-3 text-center">
@@ -39,7 +46,10 @@ export default function Home() {
           {stores && stores.length > 0 && (
             <StoreSelector
               stores={stores}
-              onSelect={(store) => router.push(`/store/${store.id}`)}
+              onSelect={(store) => {
+                trackEvent("store_selected");
+                router.push(`/store/${store.id}`);
+              }}
             />
           )}
         </div>

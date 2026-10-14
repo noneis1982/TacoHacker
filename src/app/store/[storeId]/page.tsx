@@ -7,6 +7,7 @@ import { ItemTypePicker } from "@/components/ItemTypePicker";
 import { IngredientPicker } from "@/components/IngredientPicker";
 import { HackResultsList } from "@/components/HackResultsList";
 import { ClassicsPicker } from "@/components/ClassicsPicker";
+import { AdUnit } from "@/components/AdUnit";
 import { useMenu } from "@/hooks/useMenu";
 import { useOptimizer } from "@/hooks/useOptimizer";
 import type { ItemType } from "@/types/optimizer";
@@ -160,6 +161,12 @@ export default function StorePage() {
                 error={optError}
               />
             </div>
+
+            {/* Ad slot below results. Renders only once AdSense is configured
+                (NEXT_PUBLIC_ADSENSE_CLIENT + NEXT_PUBLIC_ADSENSE_SLOT). */}
+            {results && results.results.length > 0 && (
+              <AdUnit slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT} className="mt-2" />
+            )}
           </div>
         )}
       </main>

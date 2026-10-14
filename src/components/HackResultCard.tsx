@@ -3,6 +3,7 @@
 import { useState } from "react";
 import type { HackResult } from "@/types/optimizer";
 import { formatPrice, formatPriceDelta } from "@/lib/utils";
+import { trackEvent } from "@/lib/analytics";
 
 interface HackResultCardProps {
   result: HackResult;
@@ -26,7 +27,16 @@ export function HackResultCard({ result, rank }: HackResultCardProps) {
       }`}
     >
       <button
-        onClick={() => setExpanded(!expanded)}
+        onClick={() => {
+          if (!expanded) {
+            trackEvent("hack_result_opened", {
+              rank,
+              total_price_cents: result.totalPrice,
+              has_missing_ingredients: hasMissing,
+            });
+          }
+          setExpanded(!expanded);
+        }}
         className="w-full text-left p-4"
       >
         <div className="flex items-start justify-between gap-3">

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CLASSIC_ITEMS, type ClassicItem } from "@/lib/classics";
 import type { ItemType } from "@/types/optimizer";
+import { trackEvent } from "@/lib/analytics";
 
 interface ClassicsPickerProps {
   onSelect: (ingredients: string[], itemType: ItemType) => void;
@@ -21,6 +22,11 @@ export function ClassicsPicker({ onSelect, itemType, availableIngredients }: Cla
   );
 
   function handleSelect(item: ClassicItem) {
+    trackEvent("classic_selected", {
+      classic_name: item.name,
+      item_type: item.itemType,
+      ingredient_count: item.ingredients.length,
+    });
     onSelect(item.ingredients, item.itemType);
     setExpanded(false);
   }

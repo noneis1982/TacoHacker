@@ -19,9 +19,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tacohacker.com"),
   title: "TacoHacker - Cheapest Menu Hack Finder",
   description:
     "Find the cheapest way to build your perfect Taco Bell order using menu hacks and modifications.",
+  openGraph: {
+    title: "TacoHacker - Cheapest Menu Hack Finder",
+    description:
+      "Find the cheapest way to build your perfect Taco Bell order using menu hacks and modifications.",
+    url: "https://tacohacker.com",
+    siteName: "TacoHacker",
+    images: [{ url: "/icon-512.png", width: 512, height: 512 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "TacoHacker - Cheapest Menu Hack Finder",
+    description:
+      "Find the cheapest way to build your perfect Taco Bell order using menu hacks and modifications.",
+    images: ["/icon-512.png"],
+  },
 };
 
 export default function RootLayout({

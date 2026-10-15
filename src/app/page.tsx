@@ -29,9 +29,6 @@ export default function Home() {
         </div>
 
         <div className="space-y-5">
-          <p className="text-center text-base font-medium text-zinc-500 text-pretty">
-            Enter your ZIP to find the cheapest Taco Bell hacks near you.
-          </p>
           <ZipCodeForm
             onSubmit={(value) => {
               trackEvent("store_search_submitted");

@@ -27,9 +27,9 @@ export function BackButton({ href = "/", className = "" }: BackButtonProps) {
       <span
         className="gradient-btn rounded-full flex items-center justify-center text-white
                    shadow-lg shadow-purple-500/20"
-        style={{ width: 48, height: 24 }}
+        style={{ width: 52, height: 32 }}
       >
-        <span className="text-sm leading-none">&#8592;</span>
+        <span className="text-base leading-none">&#8592;</span>
       </span>
     </button>
   );

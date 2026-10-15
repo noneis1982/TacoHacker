@@ -131,10 +131,10 @@ export default function PrivacyPage() {
           <p className="mt-2">
             Questions? Email{" "}
             <a
-              href="mailto:t.d.kviz@gmail.com"
+              href="mailto:contact@tacohacker.com"
               className="text-purple-600 hover:underline"
             >
-              t.d.kviz@gmail.com
+              contact@tacohacker.com
             </a>
             .
           </p>

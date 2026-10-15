@@ -58,7 +58,6 @@ export const PRODUCT_CATALOG: [string, string, number, string][] = [
 
   // Nachos
   ["22502", "Nachos BellGrande", 679, "/food/nachos/nachos-bellgrande"],
-  ["22500", "Chips and Nacho Cheese Sauce", 299, "/food/nachos/chips-and-nacho-cheese-sauce"],
 ];
 
 // Category page URLs to scrape product listings from

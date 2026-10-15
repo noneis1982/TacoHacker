@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import Link from "next/link";
 import "./globals.css";
 
 // AdSense publisher ID — set NEXT_PUBLIC_ADSENSE_CLIENT on Replit once approved.
@@ -43,6 +44,14 @@ export default function RootLayout({
           />
         )}
         {children}
+        <footer className="py-4 text-center">
+          <Link
+            href="/privacy"
+            className="text-xs text-zinc-400 hover:text-zinc-600 hover:underline"
+          >
+            Privacy Policy
+          </Link>
+        </footer>
       </body>
     </html>
   );

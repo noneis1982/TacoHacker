@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import Link from "next/link";
+import { FeedbackModal } from "@/components/FeedbackModal";
 import "./globals.css";
 
 // AdSense publisher ID — set NEXT_PUBLIC_ADSENSE_CLIENT on Replit once approved.
@@ -66,6 +67,7 @@ export default function RootLayout({
           />
         )}
         {children}
+        <FeedbackModal />
         <footer className="py-4 text-center">
           <Link
             href="/privacy"

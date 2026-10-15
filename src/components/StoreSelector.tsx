@@ -10,7 +10,7 @@ interface StoreSelectorProps {
 export function StoreSelector({ stores, onSelect }: StoreSelectorProps) {
   return (
     <div className="space-y-2">
-      <h2 className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+      <h2 className="type-subtitle text-zinc-500">
         Select a location
       </h2>
       <div className="space-y-1.5">

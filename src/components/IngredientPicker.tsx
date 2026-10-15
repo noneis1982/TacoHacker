@@ -73,7 +73,7 @@ export function IngredientPicker({
                   key={ing.code}
                   onClick={() => onToggle(ing.code)}
                   className={cn(
-                    "rounded-full border px-4 py-2 text-sm font-medium transition-all",
+                    "type-pill rounded-full border px-4 py-2 transition-all",
                     isSelected
                       ? `${accent.selected} shadow-md`
                       : `bg-white ${accent.idle}`

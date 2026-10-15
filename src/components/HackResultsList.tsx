@@ -62,7 +62,7 @@ export function HackResultsList({
 
   return (
     <div className="space-y-2.5">
-      <h2 className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+      <h2 className="type-subtitle text-zinc-500">
         Best Hack Paths ({results.results.length})
       </h2>
       {results.results.map((result, i) => (

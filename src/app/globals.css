@@ -50,3 +50,37 @@ body {
   transform: translateY(-1px);
   box-shadow: 0 8px 24px -8px rgba(124, 58, 237, 0.15);
 }
+
+/* ---- Type scale ----------------------------------------------------------
+ * Messaging (bigger, for marketing/modal copy): .type-display
+ * UI scale (three clear tiers):  .type-header  >  .type-subtitle  >  .type-pill
+ * Colors and spacing stay as utilities on each element; these set only the
+ * size / weight / casing so the scale is consistent everywhere.
+ * ------------------------------------------------------------------------- */
+.type-display {
+  font-size: 1.875rem; /* 30px */
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.type-header {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.type-subtitle {
+  font-size: 0.8125rem; /* 13px */
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.type-pill {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1;
+  font-weight: 500;
+}

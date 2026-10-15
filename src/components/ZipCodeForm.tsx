@@ -35,20 +35,20 @@ export function ZipCodeForm({ onSubmit, isLoading }: ZipCodeFormProps) {
             setTouched(false);
             setZip(e.target.value.replace(/\D/g, "").slice(0, 5));
           }}
-          className={`flex-1 rounded-full border bg-white px-5 py-3.5 text-base font-semibold
-                     placeholder:text-zinc-300 placeholder:font-semibold focus:outline-none
+          className={`flex-1 rounded-full border-2 bg-white px-6 py-4 text-lg font-semibold shadow-sm
+                     placeholder:text-zinc-400 placeholder:font-semibold focus:outline-none
                      focus:ring-4 transition-all
                      ${touched && !isValid
                        ? "border-red-400 focus:border-red-400 focus:ring-red-500/10"
-                       : "border-zinc-200 focus:border-purple-400 focus:ring-purple-500/10"
+                       : "border-zinc-300 focus:border-purple-400 focus:ring-purple-500/10"
                      }`}
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="gradient-btn rounded-full px-8 py-3.5 text-base font-semibold text-white
+          className="gradient-btn rounded-full px-9 py-4 text-lg font-bold text-white
                      disabled:opacity-40 disabled:cursor-not-allowed
-                     transition-all shadow-lg shadow-purple-500/20 active:scale-95"
+                     transition-all shadow-lg shadow-purple-500/25 active:scale-95"
         >
           {isLoading ? (
             <span className="inline-flex items-center gap-2">

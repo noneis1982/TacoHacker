@@ -127,7 +127,7 @@ export default function StorePage() {
         {menu && (
           <div className="space-y-6">
             <div>
-              <h2 className="text-xl font-bold text-zinc-800 mb-1">
+              <h2 className="type-header text-zinc-800 mb-1">
                 Build your order
               </h2>
               <p className="text-sm text-zinc-400">
@@ -144,7 +144,7 @@ export default function StorePage() {
             />
 
             <div>
-              <h3 className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2.5">
+              <h3 className="type-subtitle text-zinc-500 mb-2.5">
                 With these ingredients
               </h3>
               <IngredientPicker

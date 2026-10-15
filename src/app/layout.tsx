@@ -39,6 +39,11 @@ export const metadata: Metadata = {
       "Find the cheapest way to build your perfect Taco Bell order using menu hacks and modifications.",
     images: ["/icon-512.png"],
   },
+  // AdSense site-ownership verification meta tag. Only emitted once the
+  // publisher ID is configured, so it's dormant until then.
+  ...(ADSENSE_CLIENT
+    ? { other: { "google-adsense-account": ADSENSE_CLIENT } }
+    : {}),
 };
 
 export default function RootLayout({

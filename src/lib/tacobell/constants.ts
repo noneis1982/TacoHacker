@@ -55,6 +55,10 @@ export const PRODUCT_CATALOG: [string, string, number, string][] = [
   ["22321", "Chicken Quesadilla", 589, "/food/quesadillas/chicken-quesadilla"],
   ["22322", "Steak Quesadilla", 639, "/food/quesadillas/steak-quesadilla"],
   ["29158", "Cantina Chicken Rolled Quesadilla", 699, "/food/deals-and-combos/cantina-chicken-rolled-quesadilla"],
+
+  // Nachos
+  ["22502", "Nachos BellGrande", 679, "/food/nachos/nachos-bellgrande"],
+  ["22500", "Chips and Nacho Cheese Sauce", 299, "/food/nachos/chips-and-nacho-cheese-sauce"],
 ];
 
 // Category page URLs to scrape product listings from

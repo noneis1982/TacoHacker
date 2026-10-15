@@ -14,7 +14,9 @@ const ITEM_TYPES: { value: ItemType; label: string; icon: string }[] = [
   { value: "Burritos", label: "Burrito", icon: "🌯" },
   { value: "Quesadillas", label: "Quesadilla", icon: "🫓" },
   { value: "Specialties", label: "Specialty", icon: "⭐" },
-  { value: "Nachos", label: "Nachos", icon: "🧀" },
+  // "Nachos" is intentionally hidden until the catalog has Nachos products
+  // (PRODUCT_CATALOG in src/lib/tacobell/constants.ts). Selecting it yields no
+  // results because no menu item has category "Nachos".
 ];
 
 export function ItemTypePicker({ value, onChange }: ItemTypePickerProps) {

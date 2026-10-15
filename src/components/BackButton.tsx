@@ -20,11 +20,17 @@ export function BackButton({ href = "/", className = "" }: BackButtonProps) {
     <button
       onClick={() => router.push(href)}
       aria-label="Back"
-      className={`gradient-btn rounded-full flex items-center justify-center text-white
-                 shadow-lg shadow-purple-500/20 active:scale-95 transition-all shrink-0 ${className}`}
+      className={`flex items-center justify-center shrink-0 active:scale-95 transition-all ${className}`}
+      // 48px-tall hit target, but the visible pill inside is only 24px tall.
       style={{ width: 56, height: 48 }}
     >
-      <span className="text-xl leading-none">&#8592;</span>
+      <span
+        className="gradient-btn rounded-full flex items-center justify-center text-white
+                   shadow-lg shadow-purple-500/20"
+        style={{ width: 48, height: 24 }}
+      >
+        <span className="text-sm leading-none">&#8592;</span>
+      </span>
     </button>
   );
 }

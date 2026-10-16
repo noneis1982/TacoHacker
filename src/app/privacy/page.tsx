@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { BackButton } from "@/components/BackButton";
+import { Header } from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - TacoHacker",
@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="mx-auto w-full max-w-2xl px-4 py-10 flex-1">
-      <BackButton />
-
-      <h1 className="mt-4 text-3xl font-extrabold gradient-text tracking-tight">
+    <>
+      <Header />
+      <main className="mx-auto w-full max-w-2xl px-4 py-10 flex-1">
+      <h1 className="text-3xl font-extrabold gradient-text tracking-tight">
         Privacy Policy
       </h1>
       <p className="mt-2 text-sm text-zinc-400">Last updated: October 14, 2026</p>
@@ -135,6 +135,7 @@ export default function PrivacyPage() {
           </p>
         </section>
       </div>
-    </main>
+      </main>
+    </>
   );
 }
